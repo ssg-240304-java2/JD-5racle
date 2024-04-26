@@ -1,5 +1,6 @@
 package com.ohracleLand.controller;
 
+
 import com.ohracleLand.model.dto.AttractionDTO;
 import com.ohracleLand.model.dto.AttractionReservationDTO;
 import com.ohracleLand.model.dto.UserDTO;
@@ -117,6 +118,21 @@ public class AttractionManager {
             }
         }
         System.out.println("-----------------------------------------------");
+        System.out.println("[1] 예약 삭제");
+        System.out.println("[2] 뒤로 가기");
+        while (true) {
+            System.out.print("선택 : ");
+            int input = new Scanner(System.in).nextInt();
+            if (input == 1) {
+                manageReservation();
+                break;
+            } else if (input == 2) {
+                break;
+            } else {
+                System.out.print("다시 선택하세요. ");
+            }
+        }
+
     }
 
     private boolean makeReservation(int num) {
@@ -125,6 +141,62 @@ public class AttractionManager {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public void manageReservation() {
+        int count = 0;
+        System.out.print("""
+                ===============================================
+                                 놀이기구 예약 취소
+                ===============================================
+                """);
+        for (AttractionReservationDTO reservation : reservations) {
+            if (reservation.getCustomer().equals(user)) {
+                for (AttractionDTO attraction : attractions) {
+                    if (reservation.getAttraction().equals(attraction)) {
+                        System.out.print("[ " + (++count) + " ] ");
+                        attraction.showAttraction();
+                        System.out.println(attraction.waitingTime(user));
+                    }
+                }
+            }
+        }
+        System.out.println("-----------------------------------------------");
+        while (true) {
+            System.out.print("""
+                    취소할 예약 번호를 입력해주세요(0 - 뒤로가기) :\s""");
+            int input = new Scanner(System.in).nextInt();
+            if (input == 0) {
+                System.out.println("예약 관리를 종료합니다.");
+                showReservations();
+                break;
+            } else if (input >= 1 && input <= count) {
+                removeReservation(user, input);
+                System.out.println("제거를 완료했습니다.");
+                break;
+            } else {
+                System.out.println("잘못된 번호를 입력하였습니다.");
+            }
+        }
+    }
+
+    public void removeReservation(UserDTO user, int num) {
+        int count = 0;
+        for (int i = 0; i < reservations.size(); i++) {
+            if (reservations.get(i).getCustomer().equals(user)) {
+                count++;
+                if (count == num) {
+                    // attraction의 wait 데이터 제거
+                    System.out.println(attractions.get(attractions.indexOf(reservations.get(i).getAttraction())).getName());
+                    attractions.get(attractions.indexOf(reservations.get(i).getAttraction())).removeFromWaiting(user);
+                    // reservations 에서 해당 데이터 제거
+                    System.out.println(reservations.get(i).getAttraction().getName() + " " + reservations.get(i).getCustomer().getName());
+                    reservations.remove(i);
+
+                    return;
+                }
+            }
         }
     }
 }

@@ -53,6 +53,10 @@ public class AttractionDTO {
         return waiting.size();
     }
 
+    public ArrayList<UserDTO> getWaiting() {
+        return waiting;
+    }
+
     public int waitingTime(UserDTO user) {
 
 //        return (waiting.indexOf(user) / this.capacity) * this.rideTime;
