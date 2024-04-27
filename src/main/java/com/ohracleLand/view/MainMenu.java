@@ -9,13 +9,13 @@ public class MainMenu {
     Scanner sc = new Scanner(System.in);
     NoticeManager nm = new NoticeManager();
 
-    //(+) 메인메뉴 테스트코드 삭제예졍
+    //(+) 메인메뉴 테스트코드 삭제예정
     public static void main(String[] args) {
         // test mainMenu
         MainMenu m = new MainMenu();
         m.mainMenu();
     }
-    //(-) 메인메뉴 테스트코드 삭제예졍
+    //(-) 메인메뉴 테스트코드 삭제예정
 
     public void mainMenu() {
         nm.addInitData();
