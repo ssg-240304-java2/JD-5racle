@@ -2,7 +2,7 @@ package com.ohracleLand.view;
 
 import java.util.Scanner;
 
-public class ReservationMenu {
+public class AttractionReservationMenu {
     public static int menu() {
         System.out.print("""
                 ===============================================
