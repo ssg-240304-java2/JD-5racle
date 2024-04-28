@@ -1,3 +1,4 @@
+/*
 package com.ohracleLand.view;
 
 import com.ohracleLand.controller.AttractionManager;
@@ -36,4 +37,4 @@ public class AttractionReservation {
     public int AttractionList() {
         return reservationManager.printAllAvailableAttractions();
     }
-}
+}*/

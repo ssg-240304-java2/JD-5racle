@@ -1,3 +1,4 @@
+/*
 package com.ohracleLand.view;
 
 import java.util.Scanner;
@@ -14,4 +15,4 @@ public class ReservationMenu {
                 원하는 메뉴를 입력하세요 :\s""");
         return new Scanner(System.in).nextInt();
     }
-}
+}*/
