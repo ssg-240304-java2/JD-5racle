@@ -1,3 +1,4 @@
+/*
 package com.ohracleLand.model.dto;
 
 public class AttractionReservationDTO {
@@ -17,4 +18,4 @@ public class AttractionReservationDTO {
     public AttractionDTO getAttraction() {
         return attraction;
     }
-}
+}*/
