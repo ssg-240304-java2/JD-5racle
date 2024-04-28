@@ -1,10 +1,8 @@
-/*
 package com.ohracleLand.controller;
 
-
+import com.ohracleLand.model.dto.UserDTO;
 import com.ohracleLand.model.dto.AttractionDTO;
 import com.ohracleLand.model.dto.AttractionReservationDTO;
-import com.ohracleLand.model.dto.UserDTO;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -30,7 +28,7 @@ public class AttractionManager {
         attractions.add(new AttractionDTO("44444", "후룸라이드", 40, 4, true));
         attractions.add(new AttractionDTO("55555", "사파리", 50, 5, true));
 
-        UserDTO user1 = new UserDTO("1111", "엄지");
+        UserDTO user1 = new UserDTO("1111", "1111", "엄지");
         reservations.add(new AttractionReservationDTO(user1, attractions.get(0)));
         attractions.get(0).insertWaiting(user1);
         reservations.add(new AttractionReservationDTO(user1, attractions.get(1)));
@@ -39,21 +37,21 @@ public class AttractionManager {
         attractions.get(2).insertWaiting(user1);
         reservations.add(new AttractionReservationDTO(user1, attractions.get(3)));
         attractions.get(3).insertWaiting(user1);
-        UserDTO user2 = new UserDTO("2222", "검지");
+        UserDTO user2 = new UserDTO("2222", "2222", "검지");
         reservations.add(new AttractionReservationDTO(user2, attractions.get(0)));
         attractions.get(0).insertWaiting(user2);
         reservations.add(new AttractionReservationDTO(user2, attractions.get(1)));
         attractions.get(1).insertWaiting(user2);
         reservations.add(new AttractionReservationDTO(user2, attractions.get(4)));
         attractions.get(4).insertWaiting(user2);
-        UserDTO user3 = new UserDTO("3333", "중지");
+        UserDTO user3 = new UserDTO("3333", "3333", "중지");
         reservations.add(new AttractionReservationDTO(user3, attractions.get(0)));
         attractions.get(0).insertWaiting(user3);
         reservations.add(new AttractionReservationDTO(user3, attractions.get(2)));
         attractions.get(2).insertWaiting(user3);
         reservations.add(new AttractionReservationDTO(user3, attractions.get(4)));
         attractions.get(4).insertWaiting(user3);
-        UserDTO user4 = new UserDTO("4444", "약지");
+        UserDTO user4 = new UserDTO("4444", "4444", "약지");
         reservations.add(new AttractionReservationDTO(user4, attractions.get(0)));
         attractions.get(0).insertWaiting(user4);
         reservations.add(new AttractionReservationDTO(user4, attractions.get(1)));
@@ -201,4 +199,3 @@ public class AttractionManager {
         }
     }
 }
-*/
