@@ -21,7 +21,7 @@ public class RestaurantManager {
     public RestaurantManager(UserDTO user) {
 
         this.user = user;
-        // 예약가능한 놀이기구 목록 로드
+        // 예약가능한 식당 목록
         restaurants.add(new RestaurantDTO("01", "오클중식당", 70,  "30분",true));
         restaurants.add(new RestaurantDTO("02", "두메오클랜드점", 40, "2시간",true));
         restaurants.add(new RestaurantDTO("04", "오클깐부", 40, "1시간",true));
