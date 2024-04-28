@@ -1,4 +1,3 @@
-/*
 package com.ohracleLand.model.dto;
 
 import java.util.ArrayList;
@@ -75,4 +74,3 @@ public class AttractionDTO {
         waiting.remove(user);
     }
 }
-*/
