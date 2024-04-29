@@ -9,13 +9,19 @@ public class NoticeDTO {
 
     private static int cnt = 0;
 
+    public NoticeDTO() {
+    }
+
     public NoticeDTO(String title, String content, int views, String user_name) {
-        this.no = cnt + 1;
-        this.cnt = this.no;
+        this.no = ++cnt;
         this.title = title;
         this.content = content;
         this.views = views;
         this.user_name = user_name;
+    }
+
+    public void setNo(){
+        this.no = ++cnt;
     }
 
     public int getNo() {
@@ -62,7 +68,6 @@ public class NoticeDTO {
                 ", content='" + content + '\'' +
                 ", views=" + views +
                 ", user_name='" + user_name + '\'' +
-                ", cnt=" + cnt +
                 '}';
     }
 }

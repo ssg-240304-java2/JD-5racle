@@ -16,7 +16,7 @@ public class SignManager {
     public List<UserDTO> userList;
     public BufferedReader br;
 
-    public void test() throws IOException {
+    public UserDTO test() throws IOException {
 
         userList = new ArrayList<>();
 
@@ -49,7 +49,8 @@ public class SignManager {
 
         System.out.println("\n[" + loginUser.getName() + "] 님 환영합니다. 로그인이 완료되었습니다.");
 
-        br.close();
+//        br.close();
+        return loginUser;
     }
 
     public boolean signIn () throws IOException{
