@@ -3,6 +3,7 @@ package com.ohracleLand.view;
 import com.ohracleLand.controller.AttractionManager;
 import com.ohracleLand.model.dto.UserDTO;
 
+import javax.xml.transform.ErrorListener;
 import java.util.Scanner;
 
 public class AttractionReservation {
@@ -20,11 +21,15 @@ public class AttractionReservation {
         System.out.print("""
                 -----------------------------------------------
                 예약하려는 놀이기구를 선택하세요 :\s""");
-        int input = new Scanner(System.in).nextInt();
-        if (input > 0 && input <= attrCnt) {
-            reservationManager.checkSelectedAttraction(input);
-        } else {
-            System.out.println("값을 잘못 입력하였습니다.");
+        try {
+            int input = new Scanner(System.in).nextInt();
+            if (input > 0 && input <= attrCnt) {
+                reservationManager.checkSelectedAttraction(input);
+                return;
+            }
+            throw new Exception();
+        } catch (Exception e) {
+            System.out.println("번호를 잘못 입력하셨습니다.");
         }
     }
 

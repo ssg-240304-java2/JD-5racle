@@ -39,7 +39,7 @@ public class MainMenu {
 
             switch (selMenu) {
                 case 1: // 놀이기구 예약
-                    // 메소드 호출
+                    AttractionReservationMenu.menu(user);
                     break;
                 case 2: // 레스토랑 예약
                     // 메소드 호출

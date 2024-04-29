@@ -15,22 +15,25 @@ public class AttractionReservationMenu {
                     ===============================================
                     1. 놀이기구 예약
                     2. 예약 목록 확인
+                    0. 나가기
                     -----------------------------------------------
                     원하는 메뉴를 입력하세요 :\s""");
-            int input = new Scanner(System.in).nextInt();
-
-
-            switch (input) {
-                case 1:
-                    attractionReservation.selectAttraction();
-                    break;
-                case 2:
-                    attractionReservation.reservationManagement();
-                    break;
-                case 0:
-                    return;
-                default:
-                    System.out.println("값을 정확히 입력해주세요");
+            try {
+                int input = new Scanner(System.in).nextInt();
+                switch (input) {
+                    case 1:
+                        attractionReservation.selectAttraction();
+                        break;
+                    case 2:
+                        attractionReservation.reservationManagement();
+                        break;
+                    case 0:
+                        System.out.println("놀이기구 예약을 종료합니다.");
+                        return;
+                }
+                throw new Exception();
+            } catch (Exception e) {
+                System.out.println("잘못된 입력입니다.");
             }
         }
     }

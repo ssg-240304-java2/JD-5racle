@@ -120,15 +120,17 @@ public class AttractionManager {
         System.out.println("[1] 예약 삭제");
         System.out.println("[2] 뒤로 가기");
         while (true) {
-            System.out.print("선택 : ");
-            int input = new Scanner(System.in).nextInt();
-            if (input == 1) {
-                manageReservation();
-                break;
-            } else if (input == 2) {
-                break;
-            } else {
-                System.out.print("다시 선택하세요. ");
+            try {
+                System.out.print("선택 : ");
+                int input = new Scanner(System.in).nextInt();
+                if (input == 1) {
+                    manageReservation();
+                    break;
+                } else if (input == 2) {
+                    return;
+                }
+            } catch (Exception e) {
+                System.out.print("잘못된 입력입니다.");
             }
         }
 
@@ -165,17 +167,20 @@ public class AttractionManager {
         while (true) {
             System.out.print("""
                     취소할 예약 번호를 입력해주세요(0 - 뒤로가기) :\s""");
-            int input = new Scanner(System.in).nextInt();
-            if (input == 0) {
-                System.out.println("예약 관리를 종료합니다.");
-                showReservations();
-                break;
-            } else if (input >= 1 && input <= count) {
-                removeReservation(user, input);
-                System.out.println("제거를 완료했습니다.");
-                break;
-            } else {
-                System.out.println("잘못된 번호를 입력하였습니다.");
+            try {
+                int input = new Scanner(System.in).nextInt();
+                if (input == 0) {
+                    System.out.println("예약 관리를 종료합니다.");
+                    showReservations();
+                    return;
+                } else if (input >= 1 && input <= count) {
+                    removeReservation(user, input);
+                    System.out.println("제거를 완료했습니다.");
+                    return;
+                }
+                throw new Exception();
+            } catch (Exception e) {
+                System.out.println("잘못된 입력입니다.");
             }
         }
     }
