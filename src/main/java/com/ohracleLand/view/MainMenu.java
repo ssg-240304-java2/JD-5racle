@@ -13,14 +13,17 @@ public class MainMenu {
     //(+) 메인메뉴 테스트코드 삭제예정
     public static void main(String[] args) {
         // test mainMenu
-        UserDTO user = new UserDTO("1234", "1234", "찰수");
         MainMenu m = new MainMenu();
-        m.mainMenu(user);
+//        m.mainMenu();
     }
     //(-) 메인메뉴 테스트코드 삭제예정
 
     public void mainMenu(UserDTO user) {
+
         nm.addInitData();
+        UserDTO loginUser = user;   // 로그인 유저 정보
+        loginUser.toString();
+
         while (true) {
             int selMenu = 0;
             System.out.println("==== 메인 메뉴 ====");
@@ -31,12 +34,12 @@ public class MainMenu {
             System.out.println("5. 공지사항");
             System.out.println("0. 종료");
             System.out.println("=================");
-            System.out.printf("메뉴를 선택해 주세요 : ");
+            System.out.print("메뉴를 선택해 주세요 : ");
             selMenu = sc.nextInt();
 
             switch (selMenu) {
                 case 1: // 놀이기구 예약
-                    AttractionReservationMenu.menu(user);
+                    // 메소드 호출
                     break;
                 case 2: // 레스토랑 예약
                     // 메소드 호출
