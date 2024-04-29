@@ -1,6 +1,7 @@
 package com.ohracleLand.view;
 
 import com.ohracleLand.controller.NoticeManager;
+import com.ohracleLand.model.dto.UserDTO;
 
 import java.util.Scanner;
 
@@ -12,12 +13,13 @@ public class MainMenu {
     //(+) 메인메뉴 테스트코드 삭제예정
     public static void main(String[] args) {
         // test mainMenu
+        UserDTO user = new UserDTO("1234", "1234", "찰수");
         MainMenu m = new MainMenu();
-        m.mainMenu();
+        m.mainMenu(user);
     }
     //(-) 메인메뉴 테스트코드 삭제예정
 
-    public void mainMenu() {
+    public void mainMenu(UserDTO user) {
         nm.addInitData();
         while (true) {
             int selMenu = 0;
@@ -34,7 +36,7 @@ public class MainMenu {
 
             switch (selMenu) {
                 case 1: // 놀이기구 예약
-                    // 메소드 호출
+                    AttractionReservationMenu.menu(user);
                     break;
                 case 2: // 레스토랑 예약
                     // 메소드 호출
