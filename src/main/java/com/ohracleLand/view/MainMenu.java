@@ -1,5 +1,6 @@
 package com.ohracleLand.view;
 
+import com.ohracleLand.controller.LostAndFoundManager;
 import com.ohracleLand.controller.NoticeManager;
 import com.ohracleLand.model.dto.UserDTO;
 
@@ -9,6 +10,7 @@ public class MainMenu {
 
     Scanner sc = new Scanner(System.in);
     NoticeManager nm = new NoticeManager();
+    LostAndFoundManager lostM = new LostAndFoundManager();
 
     //(+) 메인메뉴 테스트코드 삭제예정
     public static void main(String[] args) {
@@ -45,7 +47,7 @@ public class MainMenu {
                     // 메소드 호출
                     break;
                 case 3: //  분실물 게시판
-                    // 메소드 호출
+                    lostM.startLost();
                     break;
                 case 4: // 고객의 소리
                     // 메소드 호출
