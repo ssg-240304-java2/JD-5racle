@@ -39,7 +39,8 @@ JD-5racle
       |    ├── LostAndFoundManager.java
       |    ├── NoticeManager.java
       |    ├── RestaurantManager.java
-      |    └── SignManager.java
+           ├── SignManager.java
+      |    └── VoiceBoardManager.java
       ├── model
       |    ├── dto
       |    |    ├── AttractionDTO.java
@@ -48,7 +49,8 @@ JD-5racle
       |    |    ├── NoticeDTO.java
       |    |    ├── RestaurantDTO.java
       |    |    ├── RestaurantReservationDTO.java
-      |    |    └── UserDTO.java
+      |    |    ├── UserDTO.java
+      |    |    └── VoiceBoardDTO.java
       ├── run
       |    └── Application.java
       └──view
@@ -60,7 +62,8 @@ JD-5racle
            ├── MainMenu.java
            ├── PrintLostAndFound.java
            ├── RestaurantReservation.java
-           └── RestaurantReservationSelect.java
+           ├── RestaurantReservationSelect.java
+           └── VoiceBoard.java
 ```
 
 <br>
