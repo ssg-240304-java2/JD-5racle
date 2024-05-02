@@ -13,33 +13,42 @@ public class VoiceBoard {
 
 
 
+
+
     public void view_board() {
 
         do {
             System.out.println("1. 게시판 글쓰기");
             System.out.println("2. 게시판 글 삭제");
             System.out.println("3. 게시판 조회");
-            System.out.println("4. ...");
+            System.out.println("4. 게시판 수정");
             System.out.println("5. 종료");
 
 
             int menu = scanner.nextInt();
 
             switch (menu) {
-                case 1:
+                case 1:                   // 게시글 작성
                     bm.addBoard(inputBoard());
                     break;
 
-                case 2:
+                case 2:                 // 게시글 삭제
                     System.out.println("삭제할 게시글 번호를 입력하세요 : ");
                     int index = scanner.nextInt();
                     bm.deleteBoard(index);
-                case 3:
+
+                case 3:                  // 게시글 조회
                     bm.BoardAll();
+
+
+
                     break;
-                case 4:
+                case 4:                 // 게시글 수정
+
+
+
                     break;
-                case 5:
+                case 5:                  // 게시글 종료
                     System.out.println("종료하시겠습니까? (y/n) : ");
                     char exit = scanner.next().toUpperCase().charAt(0);
 
