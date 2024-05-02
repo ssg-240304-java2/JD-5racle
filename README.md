@@ -39,7 +39,7 @@ JD-5racle
       |    ├── LostAndFoundManager.java
       |    ├── NoticeManager.java
       |    ├── RestaurantManager.java
-           ├── SignManager.java
+      |    ├── SignManager.java
       |    └── VoiceBoardManager.java
       ├── model
       |    ├── dto
