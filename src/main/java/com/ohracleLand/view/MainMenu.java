@@ -1,6 +1,5 @@
 package com.ohracleLand.view;
 
-import com.ohracleLand.controller.BoardManager;
 import com.ohracleLand.controller.LostAndFoundManager;
 import com.ohracleLand.controller.NoticeManager;
 import com.ohracleLand.model.dto.UserDTO;
@@ -13,7 +12,7 @@ public class MainMenu {
     NoticeManager nm = new NoticeManager();
     LostAndFoundManager lostM = new LostAndFoundManager();
 
-    BoardManager bm = new BoardManager();
+   VoiceBoard bm = new VoiceBoard();
 
     //(+) 메인메뉴 테스트코드 삭제예정
     public static void main(String[] args) {
@@ -54,7 +53,7 @@ public class MainMenu {
                     break;
                 case 4: // 고객의 소리
                     // 메소드 호출
-                    bm.view_Board();
+                    bm.view_board();
                     break;
                 case 5: // 공지사항
                     // 메소드 호출
