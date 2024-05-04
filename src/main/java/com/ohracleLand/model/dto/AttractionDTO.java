@@ -59,11 +59,10 @@ public class AttractionDTO {
 
     public int waitingTime(UserDTO user) {
 
-//        return (waiting.indexOf(user) / this.capacity) * this.rideTime;
-
-
+        return ((waiting.indexOf(user) + this.capacity) / this.capacity) * this.rideTime;
+        
         // 임시로 사용자 수 표시
-        return waiting.indexOf(user);
+//        return waiting.indexOf(user);
     }
 
     public void showAttraction() {

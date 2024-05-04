@@ -64,20 +64,4 @@ public class NoticeManager {
         noticeList.add(in.InputNotice());
     }
 
-    public void deleteNotice() {
-        System.out.println("===== 공지사항 삭제 =====");
-        System.out.println("삭제할 공지사항 번호를 입력하세요 : ");
-        int delNo = sc.nextInt();
-        int targetIdx = -1;
-
-        for (int i = 0; i < noticeList.size(); i++) {
-            if (noticeList.get(i).getNo() == delNo) {
-                targetIdx = i;
-            }
-        }
-
-        if (targetIdx != -1) {
-        }
-    }
-
 }
