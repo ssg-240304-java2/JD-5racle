@@ -5,7 +5,7 @@ public class NoticeDTO {
     private String title;
     private String content;
     private int views;
-    private String user_name;
+    private String userId;
 
     private static int cnt = 0;
 
@@ -17,7 +17,7 @@ public class NoticeDTO {
         this.title = title;
         this.content = content;
         this.views = views;
-        this.user_name = user_name;
+        this.userId = user_name;
     }
 
     public void setNo(){
@@ -53,11 +53,11 @@ public class NoticeDTO {
     }
 
     public String getUser_name() {
-        return user_name;
+        return userId;
     }
 
     public void setUser_name(String user_name) {
-        this.user_name = user_name;
+        this.userId = user_name;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class NoticeDTO {
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", views=" + views +
-                ", user_name='" + user_name + '\'' +
+                ", userId='" + userId + '\'' +
                 '}';
     }
 }
