@@ -19,7 +19,7 @@ public class MainMenu {
     public static void main(String[] args) {
         // test mainMenu
         MainMenu m = new MainMenu();
-        m.mainMenu(null);
+        m.mainMenu(new UserDTO("test1","test1","test1"));
     }
     //(-) 메인메뉴 테스트코드 삭제예정
 
@@ -58,7 +58,7 @@ public class MainMenu {
                     break;
                 case 5: // 공지사항
                     // 메소드 호출
-                    nm.view_notice();
+                    nm.view_notice(user);
                     break;
                 case 0: // 프로그램 종료
                     System.out.println("프로그램을 종료합니다.");
