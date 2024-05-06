@@ -1,6 +1,6 @@
 package com.ohracleLand.model.dto;
 
-public class BoardDTO {
+public class VoiceBoardDTO {
 
     private String user;
 
@@ -10,10 +10,10 @@ public class BoardDTO {
 
     private int no;
 
-    public BoardDTO() {
+    public VoiceBoardDTO() {
     }
 
-    public BoardDTO(String user, String title, String content, int no) {
+    public VoiceBoardDTO(String user, String title, String content, int no) {
         this.user = user;
         this.title = title;
         this.content = content;
@@ -54,11 +54,14 @@ public class BoardDTO {
 
     @Override
     public String toString() {
-        return "BoardDTO{" +
-                "user='" + user + '\'' +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", no=" + no +
-                '}';
+        return "=-=-=-=-=-=-=-=-=-=-=--=-=VOC 게시판=-=-=-=-=-=-=-=-=-=-=-=-=-= \n" +
+                "\n작성자 : " + user  +
+                "\n 제목 : " + title +
+                "\n  "  + content +
+                "\n 게시판 번호 =" + no +
+                "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
+                }
     }
-}
+
+
+

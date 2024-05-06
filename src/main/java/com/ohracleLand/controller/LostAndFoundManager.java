@@ -114,6 +114,11 @@ public class LostAndFoundManager {
                 case 1 : // 전체 조회
                     print.allLost();
                     break;
+
+
+
+
+
                 case 2 : // 검색 조회
                     showSearchLost();
                     break;
