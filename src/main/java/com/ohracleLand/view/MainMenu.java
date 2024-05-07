@@ -46,7 +46,7 @@ public class MainMenu {
                     AttractionReservationMenu.menu(user);
                     break;
                 case 2: // 레스토랑 예약
-                    // 메소드 호출
+                    RestaurantReservationSelect.select(user);
                     break;
                 case 3: //  분실물 게시판
                     lostM.startLost();
